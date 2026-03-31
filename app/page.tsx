@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <div className="flex flex-col flex-1">
@@ -18,9 +20,13 @@ function Nav() {
     <header className="sticky top-0 z-50 border-b border-[#252545] bg-[#0d0d1a]/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <div className="flex items-center gap-2.5">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#e8a020] text-sm font-bold text-[#0d0d1a]">
-            G
-          </div>
+          <Image
+            src="/gaokey-logo.svg"
+            alt="Gaokey logo"
+            width={32}
+            height={32}
+            className="rounded-lg"
+          />
           <span className="text-base font-semibold tracking-tight text-[#f0f0f5]">
             Gaokey
           </span>
@@ -52,9 +58,15 @@ function Hero() {
 
       <div className="mx-auto max-w-3xl">
         {/* logo mark */}
-        <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl shadow-[0_0_48px_rgba(232,160,32,0.25)]"
-          style={{ background: "linear-gradient(135deg,#e8a020 0%,#5b3de8 100%)" }}>
-          <span className="text-3xl font-bold text-white">G</span>
+        <div className="mx-auto mb-6 shadow-[0_0_60px_rgba(91,61,232,0.45)]" style={{ width: 96, height: 96 }}>
+          <Image
+            src="/gaokey-logo.svg"
+            alt="Gaokey"
+            width={96}
+            height={96}
+            priority
+            className="rounded-[21px]"
+          />
         </div>
 
         <h1 className="mb-4 text-5xl font-bold leading-tight tracking-tight text-[#f0f0f5] sm:text-6xl">
@@ -212,9 +224,7 @@ function Footer() {
     <footer className="border-t border-[#252545] px-6 py-10">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-sm text-[#5a5a70] sm:flex-row">
         <div className="flex items-center gap-2">
-          <div className="flex h-6 w-6 items-center justify-center rounded bg-[#e8a020] text-xs font-bold text-[#0d0d1a]">
-            G
-          </div>
+          <Image src="/gaokey-logo.svg" alt="Gaokey" width={22} height={22} className="rounded" />
           <span>© 2025 Toii Social LLC. All rights reserved.</span>
         </div>
         <div className="flex gap-6">

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,7 +14,7 @@ export default function PrivacyPolicy() {
       <header className="border-b border-[#252545] bg-[#0d0d1a]/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-4xl items-center justify-between px-6 py-4">
           <Link href="/" className="flex items-center gap-2.5">
-            <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#e8a020] text-xs font-bold text-[#0d0d1a]">G</div>
+            <Image src="/gaokey-logo.svg" alt="Gaokey" width={28} height={28} className="rounded-lg" />
             <span className="text-sm font-semibold text-[#f0f0f5]">Gaokey</span>
           </Link>
           <span className="text-xs text-[#5a5a70]">Privacy Policy</span>
@@ -171,7 +172,10 @@ function Footer() {
   return (
     <footer className="border-t border-[#252545] px-6 py-8">
       <div className="mx-auto flex max-w-4xl flex-col items-center justify-between gap-3 text-sm text-[#5a5a70] sm:flex-row">
-        <span>© 2025 Toii Social LLC. All rights reserved.</span>
+        <div className="flex items-center gap-2">
+          <Image src="/gaokey-logo.svg" alt="Gaokey" width={20} height={20} className="rounded" />
+          <span>© 2025 Toii Social LLC. All rights reserved.</span>
+        </div>
         <div className="flex gap-5">
           <Link href="/privacy/" className="hover:text-[#f0f0f5]">Privacy Policy</Link>
           <Link href="/terms/" className="hover:text-[#f0f0f5]">Terms of Service</Link>

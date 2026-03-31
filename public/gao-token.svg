@@ -1,0 +1,65 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1024" y2="1024" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#0d0820"/>
+      <stop offset="50%"  stop-color="#1e1050"/>
+      <stop offset="100%" stop-color="#0d0820"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1024" y2="1024" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#FFD060"/>
+      <stop offset="100%" stop-color="#E8A020"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background: deep space dark -->
+  <circle cx="512" cy="512" r="512" fill="url(#bg)"/>
+
+  <!-- Outer amber rim -->
+  <circle cx="512" cy="512" r="504"
+          fill="none" stroke="#E8A020"
+          stroke-width="10" opacity="0.6"/>
+
+  <!-- Inner glow ring -->
+  <circle cx="512" cy="512" r="460"
+          fill="none" stroke="rgba(232,160,32,0.08)"
+          stroke-width="24"/>
+
+  <!-- Network nodes -->
+  <circle cx="210" cy="290" r="22" fill="#E8A020" opacity="0.18"/>
+  <circle cx="814" cy="290" r="16" fill="#E8A020" opacity="0.13"/>
+  <circle cx="210" cy="734" r="16" fill="#E8A020" opacity="0.13"/>
+  <circle cx="814" cy="734" r="22" fill="#E8A020" opacity="0.18"/>
+  <circle cx="110" cy="512" r="12" fill="#E8A020" opacity="0.10"/>
+  <circle cx="914" cy="512" r="12" fill="#E8A020" opacity="0.10"/>
+
+  <!-- Network lines -->
+  <line x1="210" y1="290" x2="512" y2="512"
+        stroke="rgba(232,160,32,0.10)" stroke-width="5"/>
+  <line x1="814" y1="290" x2="512" y2="512"
+        stroke="rgba(232,160,32,0.10)" stroke-width="5"/>
+  <line x1="210" y1="734" x2="512" y2="512"
+        stroke="rgba(232,160,32,0.10)" stroke-width="5"/>
+  <line x1="814" y1="734" x2="512" y2="512"
+        stroke="rgba(232,160,32,0.10)" stroke-width="5"/>
+  <line x1="110" y1="512" x2="512" y2="512"
+        stroke="rgba(232,160,32,0.07)" stroke-width="4"/>
+  <line x1="914" y1="512" x2="512" y2="512"
+        stroke="rgba(232,160,32,0.07)" stroke-width="4"/>
+
+  <!-- G LETTERMARK: outer arc (C shape) -->
+  <path d="M 512 180 A 332 332 0 1 0 844 512 L 740 512 A 228 228 0 1 1 512 284 Z"
+        fill="url(#gold)"/>
+
+  <!-- G crossbar horizontal -->
+  <rect x="580" y="472" width="220" height="80" rx="40"
+        fill="url(#gold)"/>
+
+  <!-- G crossbar vertical drop -->
+  <rect x="764" y="472" width="80" height="170" rx="40"
+        fill="url(#gold)"/>
+
+  <!-- Star accent: 3 dots top-right -->
+  <circle cx="726" cy="196" r="20" fill="#FFD060" opacity="0.95"/>
+  <circle cx="770" cy="152" r="11" fill="#FFD060" opacity="0.55"/>
+  <circle cx="682" cy="162" r="8"  fill="#FFD060" opacity="0.40"/>
+</svg>

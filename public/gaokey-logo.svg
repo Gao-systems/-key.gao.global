@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="logoGrad" x1="0" y1="0" x2="1024" y2="1024" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#5b3de8"/>
+      <stop offset="100%" stop-color="#8b6cff"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="35%" cy="28%" r="55%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1024" height="1024" rx="224" fill="url(#logoGrad)"/>
+
+  <!-- Glass highlight -->
+  <rect width="1024" height="1024" rx="224" fill="url(#glow)"/>
+
+  <!-- Subtle border -->
+  <rect width="1024" height="1024" rx="224" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="3"/>
+
+  <!-- Key ring -->
+  <circle cx="368" cy="512" r="148" fill="none" stroke="rgba(255,255,255,0.93)" stroke-width="88"/>
+
+  <!-- Ring hole (punch-through) -->
+  <circle cx="368" cy="512" r="52" fill="#6a4ef0"/>
+
+  <!-- Key shaft -->
+  <rect x="480" y="472" width="280" height="80" rx="40" fill="rgba(255,255,255,0.93)"/>
+
+  <!-- Tooth 1 (longer) -->
+  <rect x="662" y="552" width="56" height="96" rx="28" fill="rgba(255,255,255,0.93)"/>
+
+  <!-- Tooth 2 (shorter) -->
+  <rect x="740" y="552" width="56" height="72" rx="28" fill="rgba(255,255,255,0.93)"/>
+</svg>

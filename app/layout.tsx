@@ -5,6 +5,10 @@ import "./globals.css";
 const geist = Geist({ subsets: ["latin"], variable: "--font-geist-sans" });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/favicon.png",
+    apple: "/icon.png",
+  },
   title: "Gaokey — Sovereign Identity Wallet",
   description:
     "Your keys. Your identity. Your internet. Non-custodial identity, payment signing, and AI agent authority for Gao Internet.",
