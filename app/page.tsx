@@ -73,11 +73,12 @@ function Hero() {
           Gaokey
         </h1>
         <p className="mb-4 text-xl font-medium text-[#e8a020] sm:text-2xl">
-          Your keys. Your identity. Your internet.
+          Your wallet. Your keys. Your Gao identity.
         </p>
         <p className="mb-10 text-base leading-relaxed text-[#8e8ea0] sm:text-lg">
-          Sovereign identity wallet for Gao Internet. Non-custodial. Device-native.
-          Built for the open web.
+          Gaokey is a non-custodial EOA mobile wallet for Gao Internet. Create or import a
+          wallet, store your recovery phrase in an encrypted local vault, and approve every
+          signature directly on your device.
         </p>
 
         {/* Download buttons */}
@@ -101,7 +102,7 @@ function Hero() {
         </div>
 
         <p className="mt-5 text-xs text-[#5a5a70]">
-          Pre-mainnet software · External audit planned · Do not use with real funds until audit completion
+          Pre-mainnet software · External audit planned · Do not use with material funds until audit completion
         </p>
       </div>
     </section>
@@ -109,53 +110,32 @@ function Hero() {
 }
 
 /* ── Features ────────────────────────────────────────────────────────────── */
-const features = [
-  {
-    icon: <FingerprintIcon />,
-    title: "Passkey Login",
-    description:
-      "Sign in with Face ID or fingerprint. No passwords. No seed phrase entry on device. Your biometric is your key — bound to this device only.",
-  },
-  {
-    icon: <IdentityIcon />,
-    title: "DID Identity",
-    description:
-      "Every Gaokey instance binds to a Gao Domain — an Ethereum-anchored decentralised identity. Permanent. Non-revocable. No administrator can revoke it.",
-  },
-  {
-    icon: <PaymentIcon />,
-    title: "x402 Payments",
-    description:
-      "Sign payment intents without custodying funds. Gaokey implements the x402 protocol — machine-readable payments across the Gao Internet stack.",
-  },
+const badges = [
+  "Non-custodial",
+  "Local signing",
+  "Encrypted local vault",
+  "Recovery phrase backup",
+  "GaoConnect-ready",
 ];
 
 function Features() {
   return (
     <section className="px-6 py-20">
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-4xl">
         <h2 className="mb-3 text-center text-3xl font-bold tracking-tight text-[#f0f0f5] sm:text-4xl">
-          Built for sovereignty
+          What Gaokey is
         </h2>
-        <p className="mb-14 text-center text-[#8e8ea0]">
-          Three primitives. One root of trust.
+        <p className="mb-10 text-center text-[#8e8ea0]">
+          A non-custodial EOA wallet, designed around your device.
         </p>
-        <div className="grid gap-6 sm:grid-cols-3">
-          {features.map((f) => (
-            <div
-              key={f.title}
-              className="rounded-2xl border border-[#252545] bg-[#13132a] p-7 transition-colors hover:border-[#5b3de8]/50"
+        <div className="flex flex-wrap items-center justify-center gap-3">
+          {badges.map((b) => (
+            <span
+              key={b}
+              className="rounded-full border border-[#252545] bg-[#13132a] px-4 py-2 text-sm font-medium text-[#f0f0f5]"
             >
-              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-[#5b3de8]/15 text-[#e8a020]">
-                {f.icon}
-              </div>
-              <h3 className="mb-2 text-lg font-semibold text-[#f0f0f5]">
-                {f.title}
-              </h3>
-              <p className="text-sm leading-relaxed text-[#8e8ea0]">
-                {f.description}
-              </p>
-            </div>
+              {b}
+            </span>
           ))}
         </div>
       </div>
@@ -166,8 +146,8 @@ function Features() {
 /* ── Security ────────────────────────────────────────────────────────────── */
 const securityPoints = [
   { label: "No OTA updates", detail: "Every release goes through App Store & Play Store review. No hotfixes bypass you." },
-  { label: "Credentials never leave your device", detail: "Keys live in Secure Enclave (iOS) or Android Keystore. Never transmitted, never stored server-side." },
-  { label: "No ads. No tracking. No data selling.", detail: "Gaokey collects no analytics. Your identity is yours — not a product." },
+  { label: "Keys never leave your device", detail: "Your recovery phrase and private keys are encrypted in a local vault. Face ID, Touch ID, or PIN unlocks the vault on this device only — they are not the key." },
+  { label: "No ads. No tracking. No data selling.", detail: "Gaokey does not sell or share your data. Limited anonymized diagnostics may be collected to keep the app stable — see the Privacy Policy for details." },
   { label: "IronClaw security standard", detail: "Human authority is final. AI agents cannot sign transactions or escalate privileges without explicit user approval." },
 ];
 
@@ -210,7 +190,7 @@ function Security() {
           <p className="text-sm text-[#8e8ea0]">
             <span className="font-semibold text-[#e8a020]">External audit planned.</span>{" "}
             Gaokey is pre-mainnet software. An independent security audit is required and planned before mainnet deployment.
-            Do not use with real funds until audit completion.
+            Do not use with material funds until audit completion.
           </p>
         </div>
       </div>
@@ -225,11 +205,14 @@ function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-sm text-[#5a5a70] sm:flex-row">
         <div className="flex items-center gap-2">
           <Image src="/gaokey-logo.svg" alt="Gaokey" width={22} height={22} className="rounded" />
-          <span>© 2025 Toii Social LLC. All rights reserved.</span>
+          <span>© 2026 Toii Social LLC. All rights reserved.</span>
         </div>
-        <div className="flex gap-6">
+        <div className="flex flex-wrap justify-center gap-6">
           <a href="/privacy/" className="transition-colors hover:text-[#f0f0f5]">Privacy Policy</a>
           <a href="/terms/" className="transition-colors hover:text-[#f0f0f5]">Terms of Service</a>
+          <a href="/risk/" className="transition-colors hover:text-[#f0f0f5]">Risk Disclosure</a>
+          <a href="/security/" className="transition-colors hover:text-[#f0f0f5]">Security</a>
+          <a href="/support/" className="transition-colors hover:text-[#f0f0f5]">Support</a>
         </div>
       </div>
     </footer>
@@ -249,40 +232,6 @@ function GooglePlayIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
       <path d="M3.18 23.76a2 2 0 0 1-.66-.54 2.1 2.1 0 0 1-.52-1.4V2.18A2.1 2.1 0 0 1 2.52.78a2 2 0 0 1 .66-.54l11.11 11.76zm2.33-22.01 13.5 7.35-3.08 3.26zm13.5 14.77-13.5 7.35L15.94 12zM2 1.41a1.82 1.82 0 0 0-.12.77v19.64a1.82 1.82 0 0 0 .12.77L14.1 12z" />
-    </svg>
-  );
-}
-
-function FingerprintIcon() {
-  return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4" />
-      <path d="M14 13.12c0 2.38 0 6.38-1 8.88" />
-      <path d="M17.29 21.02c.12-.6.43-2.3.5-3.02" />
-      <path d="M2 12a10 10 0 0 1 18-6" />
-      <path d="M2 17.5a14.5 14.5 0 0 0 .86-3.5" />
-      <path d="M5 19.5C5.81 17 6 15 6 12a6 6 0 0 1 .34-2" />
-      <path d="M8.65 22c.21-.66.45-1.32.57-2" />
-      <path d="M9 6.8a6 6 0 0 1 9 5.2v2" />
-    </svg>
-  );
-}
-
-function IdentityIcon() {
-  return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="12" cy="8" r="4" />
-      <path d="M6 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" />
-      <circle cx="12" cy="12" r="10" />
-    </svg>
-  );
-}
-
-function PaymentIcon() {
-  return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="2" y="5" width="20" height="14" rx="2" />
-      <line x1="2" y1="10" x2="22" y2="10" />
     </svg>
   );
 }
